@@ -1,4 +1,4 @@
-"""Fetches all of Trumps tweets and saves them to a pickle"""
+"""Loads all of Trumps tweets and saves them to a pickle for easier access"""
 import pickle
 import json
 
@@ -11,6 +11,7 @@ tweets = [e["text"] for e in raw]
 
 clean_tweets = []
 
+# Filter out urls
 for t in tweets:
     parts = []
     for p in t.split(sep=" "):
