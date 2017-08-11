@@ -1,2 +1,2 @@
 # TrumpBot
-RNN generates trumplike tweetsasd 
+RNN generates trumplike tweets.
