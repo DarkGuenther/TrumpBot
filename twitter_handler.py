@@ -31,6 +31,11 @@ with open(TWEET_FILE, "rb") as tweet_file:
 while True:
     tweet = tweets[cur_index]
     api.update_status(tweet[:140])
+
+    print("Tweeted tweet #{}:".format(cur_index))
+    print(tweet)
+    print("_"*50)
+
     cur_index += 1
     pickle.dump(cur_index, open(STATUS_FILE, "wb"))
     time.sleep(TWEET_INTERVAL)
